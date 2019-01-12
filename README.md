@@ -4,13 +4,13 @@
 
 ```
 Proyecto
-│   App.js
+│   App.js *
 │
 └───Componentes
     │   
     │
     └───home
-    │   │   Home.js
+    │   │   Home.js *
     │   │
     │   └───post
     │   │      Post.js
@@ -22,12 +22,12 @@ Proyecto
     │         InputPost.js
     │   
     └───comments
-    │       Comments.js
+    │       Comments.js *
     │       Comment.js
     │       InputComment.js
     │
     └───user
-    │       Users.js
+    │       Users.js *
     │       User.js
     │       InputUser.js
 ```
@@ -45,3 +45,16 @@ Proyecto
 
 ***Comments***
 >Mantiene la lógica de todo lo relacionado con la url "/comment". Mada a llamar el componente "Comment" y lo pinta n cantidad de veces según lo que traiga la peticón a el backend y pinta el componente InputComment para poder crearlos.
+
+
+### Componentes de pintado ###
+>Componentes que solo tiene un render y esos se pintas de acuerdo a los posts
+* Navbar
+- Comment
++ User
+
+### Componentes de Creación ###
+>Componentes que tienen forms y la lógica para poder mandar la petición al backend y crear nuevos elementos.
+* InputPost
+- InputComment
++ InputUser
