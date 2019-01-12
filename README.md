@@ -1,6 +1,6 @@
 # Proyecto wall Front #
 
-***Componenetes***
+***Componentes***
 
 ```
 Proyecto
