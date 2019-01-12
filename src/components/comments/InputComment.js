@@ -8,7 +8,8 @@ class InputComment extends Component{
         super(props)
         this.state = {
             comment:"",
-            users:[]
+            users:[],
+            userSelect:""
         }
     }
 
@@ -23,7 +24,10 @@ class InputComment extends Component{
     }
 
     createComment = () => {
-        axios.post(`http://localhost:3001/comment/${this.props.idPost}`,this.state)
+        axios.post(`http://localhost:3001/comment/${this.props.idPost}`,{
+            comment:this.state.post,
+            user:this.state.userSelect === "" ? this.state.users[0]._id : this.state.userSelect
+        })
         .then(result => {
             //Deberiamos conectar con el componente padre.Esta solución en la mas secilla pero puede mejorar
             window.location.reload(); 
@@ -49,9 +53,12 @@ class InputComment extends Component{
     }
 
     onSelect = (e) =>{
-        console.log(e.target.value);
+        this.setState({
+            userSelect:e.target.value
+        })
     }
     render(){
+        console.log(this.state);
         return(
         <div class="container mt-5">
             <form onSubmit={this.onClick}>
