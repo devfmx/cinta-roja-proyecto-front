@@ -6,7 +6,7 @@
 Proyecto
 │   App.js *
 │
-└───Componentes
+└───components
     │   
     │
     └───home
@@ -48,7 +48,7 @@ Proyecto
 
 
 ### Componentes de pintado ###
->Componentes que solo tiene un render y esos se pintas de acuerdo a los posts
+>Componentes que solo tiene un render y esos se pintas de acuerdo a los props
 * Navbar
 - Comment
 + User
